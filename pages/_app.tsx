@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import 'prismjs';
 // Import other Prism themes here
+import 'prismjs/components/prism-markdown.min';
 import 'prismjs/components/prism-bash.min';
 import 'prismjs/themes/prism.css';
 

@@ -10,7 +10,7 @@ export function CodeBlock({children, 'data-language': language}) {
   }, [children]);
 
   return (
-    <div className="code" aria-live="polite">
+    <div className="code relative" aria-live="polite">
       <pre
         ref={ref}
         className={`language-${language}`}
@@ -19,10 +19,6 @@ export function CodeBlock({children, 'data-language': language}) {
       </pre>
       <style jsx>
         {`
-          .code {
-            position: relative;
-          }
-
           /* Override Prism styles */
           .code :global(pre[class*='language-']) {
             text-shadow: none;
