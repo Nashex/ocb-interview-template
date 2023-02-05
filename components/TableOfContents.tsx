@@ -11,8 +11,9 @@ export function TableOfContents({ toc }) {
   }
 
   return (
-    <nav className="sticky top-[60px] h-[calc(100vh-60px)] flex overflow-y-auto padding-2 border-l border-gray-200 basis-1/6 pt-2">
+    <nav className="padding-2 sticky top-[60px] flex h-[calc(100vh-60px)] basis-1/6 overflow-y-auto border-l border-gray-200 pt-2">
       <ul className="flex flex-col">
+        <span className="px-4 text-sm font-bold">ON THIS PAGE</span>
         {items.map((item) => {
           const href = `#${item.id}`;
           const active =
@@ -22,8 +23,7 @@ export function TableOfContents({ toc }) {
               key={item.title}
               className={[
                 "border-l border-gray-200 pl-4",
-                active ? "border-gray-400" : "",
-                item.level === 3 ? "text-md" : "text-lg",
+                active ? "border-gray-400" : ""
               ]
                 .filter(Boolean)
                 .join(" ")}
