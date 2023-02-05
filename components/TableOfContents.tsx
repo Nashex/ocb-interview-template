@@ -21,9 +21,9 @@ export function TableOfContents({ toc }) {
             <li
               key={item.title}
               className={[
-                "border-l border-gray-200 text-lg",
-                active ? "border-blue-400" : "",
-                item.level === 3 ? "pl-4" : "pl-2",
+                "border-l border-gray-200 pl-4",
+                active ? "border-gray-400" : "",
+                item.level === 3 ? "text-md" : "text-lg",
               ]
                 .filter(Boolean)
                 .join(" ")}

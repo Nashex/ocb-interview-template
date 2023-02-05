@@ -72,15 +72,17 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <TopNav>
-        <Link href="/docs">Instructions</Link>
-      </TopNav>
-      <div className="fixed top-[60px] flex w-screen grow">
-        <SideNav />
-        <main className="grow overflow-auto h-[calc(100vh-60px)] text-xl p-2">
-          <Component {...pageProps} />
-        </main>
-        <TableOfContents toc={toc} />
+      <div className="screen h-screen bg-gradient-to-br from-slate-100 to-gray-100 text-gray-900/80">
+        <TopNav>
+          <Link href="/docs">Instructions</Link>
+        </TopNav>
+        <div className="fixed top-[60px] flex w-screen grow bg-transparent">
+          <SideNav />
+          <main className="grow overflow-auto h-[calc(100vh-60px)] text-xl p-2">
+            <Component {...pageProps} />
+          </main>
+          <TableOfContents toc={toc} />
+        </div>
       </div>
     </>
   );

@@ -6,5 +6,5 @@ interface Props {
 }
 
 export default function Document({ children, source }: Props) {
-  return <article className="prose prose-xl mx-auto">{children}</article>;
+  return <article className="prose prose-xl mx-auto prose-gray opacity-80">{children}</article>;
 }
